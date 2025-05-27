@@ -107,7 +107,7 @@ protected:
     int hitpoint;
     float velocity;
     chrono::time_point<chrono::high_resolution_clock> lastFireTime;
-    float fireCooldown = 0.3f;
+    float fireCooldown = 0.4f;
 
 public:
     Enemy(Point3f pos, Vector3f sz, Color4f col, float vel, int hp);
