@@ -9,6 +9,14 @@ void DrawText(const std::string& text, float x, float y, void* font = GLUT_BITMA
 	}
 }
 
+Scene::Scene() : currentState(GameState::InitialScreen), player(nullptr) {
+
+}
+
+Scene::~Scene() {
+	deleteMember();
+}
+
 bool Scene::Init()
 {
 	auto currentTime = chrono::high_resolution_clock::now();

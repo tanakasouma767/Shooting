@@ -19,12 +19,13 @@ private:
 	Player* player; // プレイヤー
 	vector<Bullet*> bullets; // 弾
 	vector<Enemy*> enemys; // 敵
-	vector<Bullet*> enemyBullets;
-	vector<Buff*> buffs;
+	vector<Bullet*> enemyBullets; // 敵の弾
+	vector<Buff*> buffs; // バフアイテム
 	chrono::time_point<chrono::high_resolution_clock> previousTime; // 前回取得した時刻
 
 public:
-	Scene() : currentState(GameState::InitialScreen) {}
+	Scene();
+	~Scene();
 	bool Init(); // 初期化
 	void Update(); // 更新処理
 	void Draw(); // 描画処理
